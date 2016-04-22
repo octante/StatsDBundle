@@ -1,0 +1,28 @@
+{
+  "name": "octante/statsd-bundle",
+  "type": "symfony-bundle",
+  "description": "A StatsD bundle for Symfony2 and Symfony3",
+  "keywords": ["graphite", "statsd", "symfony"],
+  "homepage": "https://github.com/octante/StatsDBundle",
+  "license": "MIT",
+  "authors": [{
+    "name": "Issel Guberna",
+    "email": "issel.guberna@gmail.com"
+  }],
+  "require": {
+    "php": ">=5.4.0",
+    "symfony/framework-bundle": "~2.3|~3.0",
+    "symfony/yaml": "~2.3|~3.0",
+    "symfony/console": "~2.3|~3.0",
+
+    "liuggio/statsd-client-bundle": "1.6.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Octante\\StatsDBundle\\": ""
+    }
+  }
+}
