@@ -1,0 +1,5 @@
+services:
+    datastats.eventdispatcher:
+        class: Octante\StatsDBundle\EventDispatcher\DataStatsEventDispatcher
+        arguments:
+            - '@event_dispatcher'

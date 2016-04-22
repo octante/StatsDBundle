@@ -1,0 +1,16 @@
+services:
+    counter.event:
+        class: Octante\StatsDBundle\Factory\CounterEvent
+        factory: [Octante\StatsDBundle\Factory\CounterEventFactory, create]
+
+    gauge.event:
+        class: Octante\StatsDBundle\Factory\GaugeEvent
+        factory: [Octante\StatsDBundle\Factory\GaugeEventFactory, create]
+
+    set.event:
+        class: Octante\StatsDBundle\Factory\SetEvent
+        factory: [Octante\StatsDBundle\Factory\SetEventFactory, create]
+
+    timer.event:
+        class: Octante\StatsDBundle\Factory\TimerEvent
+        factory: [Octante\StatsDBundle\Factory\TimerEventFactory, create]

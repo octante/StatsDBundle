@@ -1,0 +1,7 @@
+services:
+    datastats.eventlistener:
+        class: Octante\StatsDBundle\EventListener\DataStatsEventListener
+        arguments:
+            - '@statsd'
+        tags:
+            - { name: kernel.event_listener, event: data.stats, method: onReceived }
