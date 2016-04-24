@@ -14,6 +14,8 @@ This bundle uses [Symfony event system](http://symfony.com/doc/current/component
 
 [Read the documentation in Resources/doc/](https://github.com/octante/StatsDBundle/blob/master/Resources/doc/index.md)
 
+This bundle is based on [liuggio Statd client bundle](https://github.com/liuggio/StatsDClientBundle)
+
 ## License ##
 
 See [LICENSE](https://github.com/octante/StatsDBundle/blob/master/LICENSE).

@@ -29,10 +29,10 @@ public function registerBundles()
 
 ## Usage ##
 
-Configure the `statsd` client(s) in your `config.yml`, this bundle uses liuggio StatsD bundle, so configuration is the same:
+Configure the `statsd` client(s) in your `config.yml`, this bundle uses liuggio StatsD bundle, so configuration is based on it [liuggio bundle configuration](https://github.com/liuggio/StatsDClientBundle/blob/master/Resources/doc/installation.md):
 
 ``` yaml
-liuggio_stats_d_client:
+octante_stats_d_bundle:
   connection:
     host: localhost
     port: 8125

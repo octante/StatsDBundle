@@ -1,0 +1,30 @@
+parameters:
+    octante_stats_d_bundle.entity.class: Liuggio\StatsdClient\Entity\StatsdData
+    octante_stats_d_bundle.sender.debug.class: Liuggio\StatsdClient\Sender\EchoSender
+
+services:
+    octante_stats_d_bundle.sender.service:
+        class: %octante_stats_d_bundle.sender.class%
+        arguments:
+            - %octante_stats_d_bundle.connection.host%
+            - %octante_stats_d_bundle.connection.port%
+            - %octante_stats_d_bundle.connection.protocol%
+
+    octante_stats_d_bundle.client.service:
+        class: Liuggio\StatsdClient\StatsdClient
+        arguments:
+            - '@octante_stats_d_bundle.sender.service'
+            - %octante_stats_d_bundle.connection.reduce_packet%
+            - %octante_stats_d_bundle.connection.fail_silently%
+
+    octante_stats_d_client.factory:
+        class: Liuggio\StatsdClient\Factory\StatsdDataFactory
+
+    octante_stats_d_bundle.service:
+        class: Liuggio\StatsdClient\Service\StatsdService
+        arguments:
+            - '@octante_stats_d_bundle.client.service'
+            - '@octante_stats_d_client.factory'
+
+    statsd:
+        alias: octante_stats_d_bundle.service
